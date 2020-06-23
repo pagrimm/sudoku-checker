@@ -30,6 +30,25 @@ Board.prototype.checkRow = function(row) {
   return true;
 }
 
+Board.prototype.checkGrid = function(grid) {
+  let gridArray = [];
+  for (let i = 0; i < 9; i++) {
+    for (let j = 0; j < 9; j++) {
+      if (this[i][j].grid === grid) {
+        gridArray.push(this[i][j].value);
+      }
+    }
+  }
+  for(let i = 0; i < 9; i++) {
+    for(let j = i + 1; j < 9; j++) {
+      if (gridArray[i] === gridArray[j]) {
+        return false;
+      }
+    }
+  }
+  return true;
+}
+
 function Square(x, y) {
   this.x = x;
   this.y = y;

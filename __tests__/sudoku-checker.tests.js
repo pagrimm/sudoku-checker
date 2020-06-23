@@ -27,7 +27,21 @@ describe('Board', () => {
   });
 
   test('Values for each column are checked to see if they contain 1 to 9 with no repeats', () => {
+    board[0][0].value = 1;
+    board[0][1].value = 2;
+    board[0][2].value = 3;
+    board[0][3].value = 4;
+    board[0][4].value = 5;
+    board[0][5].value = 6;
+    board[0][6].value = 7;
+    board[0][7].value = 8;
+    board[0][8].value = 9;
     expect(board.checkCol(0)).toEqual(true);
+  });
+
+  test('One of the nine 3 x 3 grids contain all numbers from 1 to 9 with no repeats', () => {
+    
+    expect(board.checkGrid("00")).toEqual(true);
   });
 });
 
