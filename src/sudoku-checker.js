@@ -8,6 +8,10 @@ export function Board() {
   }
 }
 
+Board.prototype.checkRow = function(row) {
+  
+}
+
 function Square(x, y) {
   this.x = x;
   this.y = y;
