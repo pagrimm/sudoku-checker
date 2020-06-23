@@ -1,10 +1,10 @@
-# Project Name
-**for Epicodus**
-**By Peter Grimm, 05.29.2020**
+# Sudoku Checker
+**Exercise for Epicodus**  
+**By Peter Grimm, Sara Kane 05.29.2020**
 
 ## Description
 
-Insert description here
+An activity to check a Sudoku puzzle for validity, designed to practice TDD and Red Green Refactor.
 
 ## Specifications
 * 9x9 board is created
@@ -17,8 +17,9 @@ Insert description here
 ## Setup/Installation Requirements
 
 * Clone this repository 
-* Browse to the ` ` folder
-* Open `index.html` in a browser of your choice
+* Browse to the `sudoku-checker` folder
+* Run `npm install`
+* Run `npm run start` to view
 
 ## Technologies Used
 
@@ -26,6 +27,7 @@ HTML
 CSS  
 Bootstrap  
 jQuery
+Webpack
 
 ## Legal
 
