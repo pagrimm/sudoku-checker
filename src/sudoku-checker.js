@@ -49,6 +49,10 @@ Board.prototype.checkGrid = function(grid) {
   return true;
 }
 
+Board.prototype.checkAllGrids = function () {
+  return false;
+}
+
 function Square(x, y) {
   this.x = x;
   this.y = y;

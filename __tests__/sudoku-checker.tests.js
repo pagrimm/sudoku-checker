@@ -40,8 +40,20 @@ describe('Board', () => {
   });
 
   test('One of the nine 3 x 3 grids contain all numbers from 1 to 9 with no repeats', () => {
-    
+    board[0][0].value = 1;
+    board[0][1].value = 2;
+    board[0][2].value = 3;
+    board[1][0].value = 4;
+    board[1][1].value = 5;
+    board[1][2].value = 6;
+    board[2][0].value = 7;
+    board[2][1].value = 8;
+    board[2][2].value = 9;
     expect(board.checkGrid("00")).toEqual(true);
+  });
+
+  test('One of the nine 3 x 3 grids contain all numbers from 1 to 9 with no repeats', () => {
+    expect(board.checkAllGrids()).toEqual(true);
   });
 });
 
