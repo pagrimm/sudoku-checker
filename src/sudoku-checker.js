@@ -17,11 +17,7 @@ Board.prototype.checkCol = function(col) {
     }
   }
   return true;
-}
-
-Board.prototype.checkAllCols = function () {
-  return false;
-}
+};
 
 Board.prototype.checkRow = function(row) {
   for (let i = 0; i < 9; i++) {
@@ -32,11 +28,16 @@ Board.prototype.checkRow = function(row) {
     }
   }
   return true;
-}
+};
 
-Board.prototype.checkAllRows = function () {
-  return false;
-}
+Board.prototype.checkAllRowsCols = function () {
+  for (let i = 0; i < 9; i++) {
+    if (this.checkCol(i) === false || this.checkRow(i) === false) {
+      return false;
+    }
+  }
+  return true;
+};
 
 Board.prototype.checkGrid = function(grid) {
   let gridArray = [];
@@ -55,7 +56,7 @@ Board.prototype.checkGrid = function(grid) {
     }
   }
   return true;
-}
+};
 
 Board.prototype.checkAllGrids = function () {
   for (let i = 0; i < 3; i++) {
@@ -66,7 +67,7 @@ Board.prototype.checkAllGrids = function () {
     }
   }
   return true;
-}
+};
 
 function Square(x, y) {
   this.x = x;
