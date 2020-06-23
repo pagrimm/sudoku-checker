@@ -19,6 +19,10 @@ Board.prototype.checkCol = function(col) {
   return true;
 }
 
+Board.prototype.checkAllCols = function () {
+  return false;
+}
+
 Board.prototype.checkRow = function(row) {
   for (let i = 0; i < 9; i++) {
     for(let j = i + 1; j < 9; j++ ){
@@ -28,6 +32,10 @@ Board.prototype.checkRow = function(row) {
     }
   }
   return true;
+}
+
+Board.prototype.checkAllRows = function () {
+  return false;
 }
 
 Board.prototype.checkGrid = function(grid) {
@@ -50,7 +58,14 @@ Board.prototype.checkGrid = function(grid) {
 }
 
 Board.prototype.checkAllGrids = function () {
-  return false;
+  for (let i = 0; i < 3; i++) {
+    for (let j = 0; j < 3; j++) {
+      if (this.checkGrid(i.toString() + j.toString()) === false) {
+        return false;
+      }
+    }
+  }
+  return true;
 }
 
 function Square(x, y) {
