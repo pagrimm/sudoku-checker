@@ -8,8 +8,26 @@ export function Board() {
   }
 }
 
+Board.prototype.checkCol = function(col) {
+  for (let i = 0; i < 9; i++) {
+    for(let j = i + 1; j < 9; j++ ){
+      if(this[col][i].value === this[col][j].value){
+        return false;
+      }
+    }
+  }
+  return true;
+}
+
 Board.prototype.checkRow = function(row) {
-  
+  for (let i = 0; i < 9; i++) {
+    for(let j = i + 1; j < 9; j++ ){
+      if(this[i][row].value === this[j][row].value){
+        return false;
+      }
+    }
+  }
+  return true;
 }
 
 function Square(x, y) {

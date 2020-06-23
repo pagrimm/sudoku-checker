@@ -14,7 +14,20 @@ describe('Board', () => {
   });
 
   test('Values for each row are checked to see if they contain 1 to 9 with no repeats', () => {
+    board[0][0].value = 1;
+    board[1][0].value = 2;
+    board[2][0].value = 3;
+    board[3][0].value = 4;
+    board[4][0].value = 5;
+    board[5][0].value = 6;
+    board[6][0].value = 7;
+    board[7][0].value = 8;
+    board[8][0].value = 9;
     expect(board.checkRow(0)).toEqual(true);
+  });
+
+  test('Values for each column are checked to see if they contain 1 to 9 with no repeats', () => {
+    expect(board.checkCol(0)).toEqual(true);
   });
 });
 
